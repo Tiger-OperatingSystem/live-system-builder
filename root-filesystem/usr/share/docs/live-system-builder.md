@@ -1,0 +1,1 @@
+Use o diretório `root-filesystem` para injetar arquivos diretamente na raíz do sistema live sem a necessidade de um pacote Debian, por exemplo, esse arquivo poderá ser encontrado em `/usr/share/docs/` na imagem de sistema gerada
