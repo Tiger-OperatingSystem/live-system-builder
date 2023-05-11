@@ -1,0 +1,13 @@
+# Aqui ficam efetivamente os pacotes do sistema, eles são instalados com a flag --no-install-recomends
+# é o local indicado para adicionar pacotes do repositório
+gtk2-engines-murrine       # Suporte a temas GTK 2
+gtk2-engines-pixbuf       # Suporte a temas GTK 2
+# ubiquity                # Backend do instalador por algum motivo se nãeo instalar a parte o instalador quebra
+# ubiquity-casper         # Instalador OEM 
+# ubiquity-slideshow-?    # Slides
+# ubiquity-frontend-gtk   # Frontend-gtk
+#---------------------------------------------------------------------------
+# Adicione pacotes customizados abaixo
+#---------------------------------------------------------------------------
+synaptic                  # Instalador gráfico de .debs
+xubuntu-core              # Estando aqui, evita instalar coisas do gnom
