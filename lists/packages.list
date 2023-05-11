@@ -1,0 +1,53 @@
+# Essa é a lista de pacotes que devem ser instalados com os recomendados
+# teoricamente não tem motivos para alterar
+apt-utils
+alsa-base
+b43-fwcutter
+bcmwl-kernel-source # Suporte a Macbooks Intel (não testado)
+brightnessctl
+casper
+cups
+curl
+discover
+dkms
+ethtool
+grub-efi-amd64-signed
+inetutils-ping
+laptop-detect
+lib32gcc-s1
+linux-generic
+lm-sensors
+locales
+net-tools
+net-tools
+network-manager
+os-prober
+printer-driver-all # PDDs das impressoras mais comuns
+pulseaudio
+resolvconf
+wireless-tools
+x11-xserver-utils
+xserver-xorg-input-all
+xserver-xorg-video-all
+uuid-runtime
+xterm # Previne a instalação do gnome-terminal, removido dos menus com simplifica-xfce
+xorg
+xinit
+iptables
+iputils-tracepath
+irqbalance
+manpages
+mtr-tiny
+nano
+ntfs-3g
+plymouth
+tcpdump
+ufw
+
+# Lista de pacotes completos do Tiger OS começa aqui
+gparted # Aqui por causa do suporte a ReiserFS, FAT, exFAT, set e2FS e outros
+ubuntu-restricted-extras # Talvez deva ser removido?
+openssh-client
+bash-completion
+command-not-found
+friendly-recovery
