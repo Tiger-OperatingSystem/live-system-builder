@@ -1,0 +1,4 @@
+# O script é estruturado de maneira a evitar ao máximo evitar a instalação de pacotes
+# desnecessariamente, porém alguns são inevitáveis
+xubuntu-default-settings
+xfce4-session
