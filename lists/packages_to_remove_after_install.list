@@ -1,3 +1,4 @@
 # Após a instalação alguns pacotes podem se tornar desnecessário (instalador por exemplo)
 # então o instalador do sistema vai ler essa lista para remover os pacotes
 ubiquity
+boot-repair
