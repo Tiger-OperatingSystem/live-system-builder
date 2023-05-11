@@ -1,0 +1,6 @@
+name:     Tiger OS 23  # Nome do sistema
+base:     jammy        # Release do Ubuntu
+keyboard: br           # Layout do teclado
+mirror:   us           # Espelho do Ubuntu
+user:     tiger        # Usuário modo live
+host:     live         # Nome de host padrão
