@@ -1,0 +1,10 @@
+# Alguns pacotes são usados de dependência de outros pacotes mas eles não realmente são utilizados
+# o construtor limpa eles e trava a atualização recomendado apenas para temas, mais especificamente
+# os abaixo:
+ubuntu-mono
+numix-gtk-theme # o do reposítorio pode ter inconsistências com apps mais recentes
+greybird-gtk-theme
+xubuntu-wallpapers
+humanity-icon-theme
+elementary-xfce-icon-theme # o do reposítorio pode ter inconsistências com apps mais recentes
+adwaita-icon-theme
