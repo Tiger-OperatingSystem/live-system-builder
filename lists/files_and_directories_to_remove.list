@@ -1,0 +1,3 @@
+# Os arquivos e pastas listados aqui serão removidos da compilação final
+/usr/share/backgrounds/xfce/
+/usr/share/xsessions/xfce4.desktop
