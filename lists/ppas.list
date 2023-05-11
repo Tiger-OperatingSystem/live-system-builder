@@ -1,2 +1,6 @@
 # Adiciona PPAs em massa, siga a sintaxe:
 # ppa:usuario/projeto
+
+ppa:mozillateam/ppa
+ppa:yannubuntu/boot-repair
+ppa:xubuntu-dev/staging
