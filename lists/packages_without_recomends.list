@@ -21,3 +21,5 @@ meld                      # Comparador de arquivos
 unrar                     # Descompactador RAR
 python3-pip               # Instalador de pacotes Python
 parole                    # Player de midia
+mousepad                  # Editor de textos
+boot-repair               # Correção de boot
