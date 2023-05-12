@@ -15,8 +15,8 @@ xubuntu-core              # Estando aqui, evita instalar coisas do gnom
 atril                     # Leitor de PDF
 gnome-calculator          # Calculadora
 timeshift                 # Ferramenta de backUp
-baobab
-meld
-unrar
-python3-pip
-Parole
+baobab                    # Analisador de discos
+meld                      # Comparador de arquivos
+unrar                     # Descompactador RAR
+python3-pip               # Instalador de pacotes Python
+parole                    # Player de midia
