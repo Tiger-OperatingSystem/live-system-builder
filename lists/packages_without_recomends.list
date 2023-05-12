@@ -23,3 +23,6 @@ python3-pip               # Instalador de pacotes Python
 parole                    # Player de midia
 mousepad                  # Editor de textos
 boot-repair               # Correção de boot
+gigolo                    # Gerenciador de servidores
+ristretto                 # Visualizador de Imagens
+tilix                     # Emulador de Terminal
