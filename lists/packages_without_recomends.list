@@ -11,6 +11,7 @@ gtk2-engines-pixbuf       # Suporte a temas GTK 2
 #---------------------------------------------------------------------------
 synaptic                  # Instalador gráfico de .debs
 xubuntu-core              # Estando aqui, evita instalar coisas do gnom
+cron                      # Dependência do timeshift
 
 atril                     # Leitor de PDF
 gnome-calculator          # Calculadora
