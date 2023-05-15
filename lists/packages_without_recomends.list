@@ -1,11 +1,20 @@
 # Aqui ficam efetivamente os pacotes do sistema, eles são instalados com a flag --no-install-recomends
 # é o local indicado para adicionar pacotes do repositório
-gtk2-engines-murrine       # Suporte a temas GTK 2
-gtk2-engines-pixbuf       # Suporte a temas GTK 2
-# ubiquity                # Backend do instalador por algum motivo se nãeo instalar a parte o instalador quebra
-# ubiquity-casper         # Instalador OEM 
-# ubiquity-slideshow-?    # Slides
-# ubiquity-frontend-gtk   # Frontend-gtk
+gtk2-engines-murrine         # Suporte a temas GTK 2
+gtk2-engines-pixbuf          # Suporte a temas GTK 2
+language-pack-pt-base        # Traduções do sistema para português
+language-pack-kde-base       # Traduções do sistema para português
+language-pack-gnome-pt       # Traduções do sistema para português 
+language-pack-gnome-pt-base  # Traduções do sistema para português 
+language-pack-kde-pt-base    # Traduções do sistema para português 
+
+#lib gtkx11
+
+
+# ubiquity                 # Backend do instalador por algum motivo se nãeo instalar a parte o instalador quebra
+# ubiquity-casper          # Instalador OEM 
+# ubiquity-slideshow-?     # Slides
+# ubiquity-frontend-gtk    # Frontend-gtk
 #---------------------------------------------------------------------------
 # Adicione pacotes customizados abaixo
 #---------------------------------------------------------------------------
