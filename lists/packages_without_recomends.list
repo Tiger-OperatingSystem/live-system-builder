@@ -9,6 +9,16 @@ gtk2-engines-pixbuf       # Suporte a temas GTK 2
 #---------------------------------------------------------------------------
 # Adicione pacotes customizados abaixo
 #---------------------------------------------------------------------------
+
+yad                       # Diálogos GUI
+xfce4-genmon-plugin       # Plugin Monitor genérico
+xfce4-pulseaudio-plugin   # Plugin Controle de áudio
+xfce4-whiskermenu-plugin  # Plugin Menu Whisker
+xfce4-battery-plugin      # Plugin Monitor de baterias
+wmctrl                    # Controlador headless de janelas
+mate-polkit               # Interface de processos rootless-root
+network-manager-gnome     # Plugin de redes
+
 synaptic                  # Instalador gráfico de .debs
 xubuntu-core              # Estando aqui, evita instalar coisas do gnom
 cron                      # Dependência do timeshift
@@ -22,7 +32,8 @@ unrar                     # Descompactador RAR
 python3-pip               # Instalador de pacotes Python
 parole                    # Player de midia
 mousepad                  # Editor de textos
-boot-repair               # Correção de boot
-gigolo                    # Gerenciador de servidores
-ristretto                 # Visualizador de Imagens
-tilix                     # Emulador de Terminal
+gigolo                    # Gerenciador de Servidores
+tilix                     # Emulador de terminal
+ristretto                 # Visualizador de imagens
+
+tumbler-plugins-extra     # Miniaturas para documentos, Imagem RAW e vídeos
