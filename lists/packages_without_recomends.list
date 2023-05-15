@@ -15,6 +15,8 @@ xfce4-genmon-plugin       # Plugin Monitor genérico
 xfce4-pulseaudio-plugin   # Plugin Controle de áudio
 xfce4-whiskermenu-plugin  # Plugin Menu Whisker
 xfce4-battery-plugin      # Plugin Monitor de baterias
+xfce4-places-plugin       # Plugin Diretórios
+xfce4-docklike-plugin     # Plugin Gerenciamento de janelas estilo dock
 wmctrl                    # Controlador headless de janelas
 mate-polkit               # Interface de processos rootless-root
 network-manager-gnome     # Plugin de redes
@@ -24,7 +26,7 @@ xubuntu-core              # Estando aqui, evita instalar coisas do gnom
 cron                      # Dependência do timeshift
 
 atril                     # Leitor de PDF
-gnome-calculator          # Calculadora
+mate-calc                 # Calculadora
 timeshift                 # Ferramenta de backUp
 baobab                    # Analisador de discos
 meld                      # Comparador de arquivos
@@ -35,5 +37,8 @@ mousepad                  # Editor de textos
 gigolo                    # Gerenciador de Servidores
 tilix                     # Emulador de terminal
 ristretto                 # Visualizador de imagens
+catfish                   # Pesquisador de Arquivos
+xfce4-screenshooter       # Captura de telas
 
 tumbler-plugins-extra     # Miniaturas para documentos, Imagem RAW e vídeos
+plocate                   # Busca de arquivos por padrões
