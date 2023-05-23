@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Esse script é a última coisa a rodar na construção da ISO
+# use ele pra substituir snaps, limpar arquivos de construção
+# instalar ou remover gerenciadores de pacotes alternativos
+# etc...
+
+pip3 install bigbashview==3.6.6
+
+echo '
+Package: *
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 1001
+' | tee /etc/apt/preferences.d/mozilla-firefox
+
+echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";' | 
+      tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox
+      
+apt install firefox
