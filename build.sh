@@ -12,11 +12,11 @@ HERE="$(dirname "$(readlink -f "${0}")")"
 
 name=$(sed     's|[[:space:]]||g;s|#.*||g' distro.yaml | grep -m1 ^"name:"     | cut -d: -f2)
 version=$(sed  's|[[:space:]]||g;s|#.*||g' distro.yaml | grep -m1 ^"base:"     | cut -d: -f2)
-splash=$(sed   's|[[:space:]]||g;s|#.*||g' distro.yaml | grep -m1 ^"base:"     | cut -d: -f2)
+splash=$(sed   's|[[:space:]]||g;s|#.*||g' distro.yaml | grep -m1 ^"splash:"   | cut -d: -f2)
 keyboard=$(sed 's|[[:space:]]||g;s|#.*||g' distro.yaml | grep -m1 ^"keyboard:" | cut -d: -f2)
 mirror=$(sed   's|[[:space:]]||g;s|#.*||g' distro.yaml | grep -m1 ^"mirror:"   | cut -d: -f2)
-user=$(sed     's|[[:space:]]||g;s|#.*||g' distro.yaml | grep -m1 ^"user:"   | cut -d: -f2)
-host=$(sed     's|[[:space:]]||g;s|#.*||g' distro.yaml | grep -m1 ^"host:"   | cut -d: -f2)
+user=$(sed     's|[[:space:]]||g;s|#.*||g' distro.yaml | grep -m1 ^"user:"     | cut -d: -f2)
+host=$(sed     's|[[:space:]]||g;s|#.*||g' distro.yaml | grep -m1 ^"host:"     | cut -d: -f2)
 
 echo "---------------------------------------------------------"
 echo "  Verificando "
@@ -57,6 +57,7 @@ for arg in ${@}; do
   }
 done
 
+
 echo "---------------------------------------------------------"
 echo "  Instalando dependencias de compilação"
 echo "---------------------------------------------------------"
@@ -92,6 +93,12 @@ echo "---------------------------------------------------------"
               --components=main,multiverse,universe   \
               "${version}" "${HOME}/${name}/chroot"
 }
+
+echo "---------------------------------------------------------"
+echo "  Copiando configurações iniciais"
+echo "---------------------------------------------------------"
+
+cp -rf root-filesystem/* "${HOME}/${name}/chroot/"
 
 echo "---------------------------------------------------------"
 echo "  Iniciando sistemas de arquivo virtuais"
@@ -201,6 +208,7 @@ echo "---------------------------------------------------------"
   echo "  Executando script de limpeza"
   echo "---------------------------------------------------------"
 
+  chmod +x "${HOME}/${name}/chroot/usr/bin/finisher"
   chroot "${HOME}/${name}/chroot" finisher
   rm "${HOME}/${name}/chroot/usr/bin/finisher"
 }
@@ -212,10 +220,9 @@ echo "---------------------------------------------------------"
 chroot "${HOME}/${name}/chroot" apt autoremove --purge -y \
            $(sed 's|#.*||g' lists/packages_to_remove.list | xargs)
 
-[ ! "${splash}" = "" ] && {
-  chroot "${HOME}/${name}/chroot" sh -c "update-alternatives --set default.plymouth /usr/share/plymouth/themes/bgrt/bgrt.plymouth"
-  chroot "${HOME}/${name}/chroot" update-initramfs -u -k all
-}
+#[ ! "${splash}" = "" ] && {
+
+#}
 
 echo "---------------------------------------------------------"
 echo "  Habilitando internet em modo live"
@@ -312,6 +319,19 @@ chroot "${HOME}/${name}/chroot" apt upgrade -y
   chroot "${HOME}/${name}/chroot" /clear-files $(sed 's|#.*||g' lists/packages_to_prevent_futher_updates.list | xargs)
   rm "${HOME}/${name}/chroot/clear-files"
 }
+
+echo "---------------------------------------------------------"
+echo "  Ativando boot splash"
+echo "---------------------------------------------------------"
+
+echo "${splash}"
+
+chmod +x "${HOME}/${name}/chroot/usr/share/plymouth/themes/boot-splash/boot-splash.plymouth"
+chmod +x "${HOME}/${name}/chroot/usr/share/plymouth/themes/boot-splash/boot-splash.script"
+
+chroot "${HOME}/${name}/chroot" cp "/usr/share/plymouth/themes/boot-splash/boot-splash.plymouth" "/usr/share/plymouth/themes/xubuntu-logo/xubuntu-logo.plymouth"
+  
+chroot "${HOME}/${name}/chroot" update-initramfs -u -k all
 
 echo "---------------------------------------------------------"
 echo "  Inicializando criação da imagem ISO"
