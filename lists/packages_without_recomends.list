@@ -52,6 +52,8 @@ tilix                     # Emulador de terminal
 ristretto                 # Visualizador de imagens
 catfish                   # Pesquisador de Arquivos
 xfce4-screenshooter       # Captura de telas
+mintdrivers               # Gerenciador de drivers do Mint
+webapp-manager            # Criação de webApps
 
 tumbler-plugins-extra     # Miniaturas para documentos, Imagem RAW e vídeos
 plocate                   # Busca de arquivos por padrões
