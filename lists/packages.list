@@ -44,7 +44,6 @@ plymouth
 tcpdump
 ufw
 psmisc
-# ubiquity-frontend-gtk
 
 # Lista de pacotes completos do Tiger OS começa aqui
 gparted # Aqui por causa do suporte a ReiserFS, FAT, exFAT, set e2FS e outros

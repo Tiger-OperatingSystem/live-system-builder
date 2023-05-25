@@ -15,10 +15,10 @@ language-pack-gnome-pt-base  ##
 #lib gtkx11
 
 
-# ubiquity                 # Backend do instalador por algum motivo se nãeo instalar a parte o instalador quebra
-# ubiquity-casper          # Instalador OEM 
+ubiquity                 # Backend do instalador por algum motivo se nãeo instalar a parte o instalador quebra
+ubiquity-casper          # Instalador OEM 
 # ubiquity-slideshow-?     # Slides
-# ubiquity-frontend-gtk    # Frontend-gtk
+ubiquity-frontend-gtk    # Frontend-gtk
 #---------------------------------------------------------------------------
 # Adicione pacotes customizados abaixo
 #---------------------------------------------------------------------------
