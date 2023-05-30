@@ -16,4 +16,16 @@ Pin-Priority: 1001
 echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";' | 
       tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox
       
-apt install firefox -y
+apt install firefox firefox-locale-pt git -y
+
+(
+      cd /tmp
+      git clone https://github.com/Tiger-OperatingSystem/icons.git
+      mv icons/*/* /usr/share/icons
+      rm -rf /tmp icons/
+
+      find /usr/share/icons -maxdepth 1 -type d -exec update-icon-caches {} \; 
+
+      apt remove git -y
+      apt autoremove -y
+)
