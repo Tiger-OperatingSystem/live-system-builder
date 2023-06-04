@@ -26,6 +26,8 @@ apt install firefox firefox-locale-pt git -y
 
       find /usr/share/icons -maxdepth 1 -type d -exec update-icon-caches {} \; 
 
-      apt remove git -y
-      apt autoremove -y
+      mkdir -p /tmp
 )
+
+apt remove git -y
+apt autoremove -y
