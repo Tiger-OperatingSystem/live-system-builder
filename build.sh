@@ -470,16 +470,16 @@ cat /usr/lib/grub/i386-pc/cdboot.img isolinux/core.img > isolinux/bios.img
 
 /bin/bash -c '(find . -type f -print0 | xargs -0 md5sum | grep -v "\./md5sum.txt" > md5sum.txt)'
 
-mkdir -pv ../iso
-xorriso -as mkisofs -iso-level 3 -full-iso9660-filenames       \
-   -volid "${name}" -eltorito-boot boot/grub/bios.img          \
-   -no-emul-boot -boot-load-size 4 -boot-info-table            \
-   --eltorito-catalog boot/grub/boot.cat --grub2-boot-info     \
-   --grub2-mbr /usr/lib/grub/i386-pc/boot_hybrid.img           \
-   -eltorito-alt-boot -e EFI/efiboot.img                       \
-   -no-emul-boot -append_partition 2 0xef isolinux/efiboot.img \
-   -output "../iso/${name}-amd64.iso" -graft-points "."  \
-      /boot/grub/bios.img=isolinux/bios.img                    \
+mkdir -pv ../iso 
+xorriso -as mkisofs -iso-level 3 -full-iso9660-filenames         \
+   -volid "${name}" -eltorito-boot boot/grub/bios.img            \
+   -no-emul-boot -boot-load-size 4 -boot-info-table              \
+   --eltorito-catalog boot/grub/boot.cat --grub2-boot-info       \
+   --grub2-mbr /usr/lib/grub/i386-pc/boot_hybrid.img             \
+   -eltorito-alt-boot -e EFI/efiboot.img                         \
+   -no-emul-boot -append_partition 2 0xef isolinux/efiboot.img   \
+   -output "../iso/${name}-amd64.iso" -graft-points "."          \
+      /boot/grub/bios.img=isolinux/bios.img                      \
       /EFI/efiboot.img=isolinux/efiboot.img
 
 md5sum ../iso/${name}-amd64.iso > ../iso/${name}-amd64.md5
