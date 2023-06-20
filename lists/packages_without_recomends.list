@@ -2,7 +2,7 @@
 # é o local indicado para adicionar pacotes do repositório
 gtk2-engines-murrine         # Suporte a temas GTK 2
 gtk2-engines-pixbuf          # Suporte a temas GTK 2
-gdisk                        # Alternativa ao fdisk para discos GPT
+libgtk2.0-0                  # Suporte a apps GTK 2 em alguns plugins
 
 ###############################
                              ##
@@ -30,7 +30,7 @@ mate-polkit               # Interface de processos rootless-root
 network-manager-gnome     # Plugin de redes
 
 synaptic                  # Instalador gráfico de .debs
-xubuntu-core              # Estando aqui, evita instalar coisas do GNOME
+xubuntu-core              # Estando aqui, evita instalar coisas do gnom
 cron                      # Dependência do timeshift
 
 atril                     # Leitor de PDF
