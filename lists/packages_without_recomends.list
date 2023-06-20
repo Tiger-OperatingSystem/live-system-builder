@@ -12,13 +12,8 @@ language-pack-pt             ##
 language-pack-gnome-pt-base  ##
                              ##
 ###############################
-#lib gtkx11
 
 
-ubiquity                 # Backend do instalador por algum motivo se nãeo instalar a parte o instalador quebra
-ubiquity-casper          # Instalador OEM 
-# ubiquity-slideshow-?     # Slides
-ubiquity-frontend-gtk    # Frontend-gtk
 #---------------------------------------------------------------------------
 # Adicione pacotes customizados abaixo
 #---------------------------------------------------------------------------
@@ -54,6 +49,11 @@ catfish                   # Pesquisador de Arquivos
 xfce4-screenshooter       # Captura de telas
 mintdrivers               # Gerenciador de drivers do Mint
 webapp-manager            # Criação de webApps
+xarchiver                 # Gerenciador de arquivos compactados
+gdebi                     # Instalador gráfico de pacotes .deb
+
+boot-repair               # Reparador de boot
+mdadm                     # Suporte a RAID pro boot-repair
 
 tumbler-plugins-extra     # Miniaturas para documentos, Imagem RAW e vídeos
 plocate                   # Busca de arquivos por padrões
