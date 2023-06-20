@@ -214,15 +214,11 @@ echo "---------------------------------------------------------"
 }
 
 echo "---------------------------------------------------------"
-echo "  Executando limpeza do APT"
+echo "  Removendo pacotes indesejados"
 echo "---------------------------------------------------------"
 
 chroot "${HOME}/${name}/chroot" apt autoremove --purge -y \
            $(sed 's|#.*||g' lists/packages_to_remove.list | xargs)
-
-#[ ! "${splash}" = "" ] && {
-
-#}
 
 echo "---------------------------------------------------------"
 echo "  Habilitando internet em modo live"
@@ -239,7 +235,6 @@ managed=false
 EOF
 chroot "${HOME}/${name}/chroot" dpkg-reconfigure network-manager
 
-
 echo "---------------------------------------------------------"
 echo "  Finalizando compilação"
 echo "---------------------------------------------------------"
@@ -247,11 +242,10 @@ echo "---------------------------------------------------------"
 chroot "${HOME}/${name}/chroot" truncate -s 0 /etc/machine-id
 chroot "${HOME}/${name}/chroot" rm /sbin/initctl
 chroot "${HOME}/${name}/chroot" dpkg-divert --rename --remove /sbin/initctl
-chroot "${HOME}/${name}/chroot" apt clean
-chroot "${HOME}/${name}/chroot" rm -rf /tmp/* ~/.bash_history
-chroot "${HOME}/${name}/chroot" umount /proc
-chroot "${HOME}/${name}/chroot" umount /dev/pts
 chroot "${HOME}/${name}/chroot" sh -c "export HISTSIZE=0"
+
+rm -rf chroot "${HOME}/${name}/chroot/tmp"/*
+rm -rf chroot "${HOME}/${name}/chroot/root/.bash_history"
 
 echo "RESUME=none"   > "${HOME}/${name}/chroot/etc/initramfs-tools/conf.d/resume"
 echo "FRAMEBUFFER=y" > "${HOME}/${name}/chroot/etc/initramfs-tools/conf.d/splash"
@@ -395,23 +389,6 @@ EOF
   cat image/boot/grub/loopback.cfg
 ) > image/isolinux/grub.cfg
 
-
-[ ! "${splash}" = "true" ] && {
-cat <<EOF > "image/preseed/${name}.seed"
-# Success command
-#d-i ubiquity/success_command string \
-sed -i 's/quiet splash/loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off/g' /target/etc/default/grub ; \
-chroot /target update-grub
-EOF
-} || {
-cat <<EOF > "image/preseed/${name}.seed"
-# Success command
-#d-i ubiquity/success_command string \
-sed -i 's/quiet splash/quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off/g' /target/etc/default/grub ; \
-chroot /target update-grub
-EOF
-}
-
 echo "---------------------------------------------------------"
 echo "  Pacotes pré-instalados no sistema"
 echo "---------------------------------------------------------"
@@ -434,11 +411,13 @@ sed 's|[[:space:]]||g;s|#.*||g' "${HERE}/lists/packages_to_remove_after_install.
   echo "  Comprimindo imagem do sistema"
   echo "---------------------------------------------------------"
   echo
+  umount -l "${HOME}/${name}/chroot/dev/pts"
   umount -l "${HOME}/${name}/chroot/dev"
   umount -l "${HOME}/${name}/chroot/sys"
   umount -l "${HOME}/${name}/chroot/proc"
   umount -l "${HOME}/${name}/chroot/run"
 
+  umount -l "${HOME}/${name}/chroot/dev/pts"
   umount -l "${HOME}/${name}/chroot/dev"
   umount -l "${HOME}/${name}/chroot/sys"
   umount -l "${HOME}/${name}/chroot/proc"
