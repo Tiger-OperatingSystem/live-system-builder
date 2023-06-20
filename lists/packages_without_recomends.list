@@ -36,6 +36,10 @@ xfce4-docklike-plugin     # Plugin Gerenciamento de janelas estilo dock
 wmctrl                    # Controlador headless de janelas
 mate-polkit               # Interface de processos rootless-root
 network-manager-gnome     # Plugin de redes
+mdadm                     # Suporte a RAID pro boot-repair
+                          #
+tumbler-plugins-extra     # Miniaturas para documentos, Imagem RAW e vídeos
+plocate                   # Busca de arquivos por padrões
                           #
 synaptic                  # Instalador gráfico de .debs
                           #
@@ -58,7 +62,3 @@ webapp-manager            # Criação de webApps
 xarchiver                 # Gerenciador de arquivos compactados
                           #
 boot-repair               # Reparador de boot
-mdadm                     # Suporte a RAID pro boot-repair
-                          #
-tumbler-plugins-extra     # Miniaturas para documentos, Imagem RAW e vídeos
-plocate                   # Busca de arquivos por padrões
