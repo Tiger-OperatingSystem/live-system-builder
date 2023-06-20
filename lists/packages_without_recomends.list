@@ -3,6 +3,7 @@
 gtk2-engines-murrine         # Suporte a temas GTK 2
 gtk2-engines-pixbuf          # Suporte a temas GTK 2
 libgtk2.0-0                  # Suporte a apps GTK 2 em alguns plugins
+gdisk                        # Alternativa ao fdisk para discos GPT
 
 ###############################
                              ##
