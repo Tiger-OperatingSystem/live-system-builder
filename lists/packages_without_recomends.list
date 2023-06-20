@@ -1,9 +1,11 @@
-# Aqui ficam efetivamente os pacotes do sistema, eles são instalados com a flag --no-install-recomends
-# é o local indicado para adicionar pacotes do repositório
-gtk2-engines-murrine         # Suporte a temas GTK 2
-gtk2-engines-pixbuf          # Suporte a temas GTK 2
-libgtk2.0-0                  # Suporte a apps GTK 2 em alguns plugins
-gdisk                        # Alternativa ao fdisk para discos GPT
+#  Aqui ficam efetivamente os pacotes do sistema, eles são instalados 
+#  com a flag --no-install-recomends é o local indicado para adicionar 
+#  pacotes do repositório
+#---------------------------------------------------------------------------
+
+gtk2-engines-murrine      # Suporte a temas GTK 2
+gtk2-engines-pixbuf       # Suporte a temas GTK 2
+libgtk2.0-0               # Suporte a apps GTK 2 em alguns plugins
 
 ###############################
                              ##
@@ -19,6 +21,11 @@ language-pack-gnome-pt-base  ##
 # Adicione pacotes customizados abaixo
 #---------------------------------------------------------------------------
 
+gdisk                     # Alternativa ao fdisk para discos GPT
+python3-pip               # Instalador de pacotes Python
+xubuntu-core              # Estando aqui, evita instalar coisas do gnom
+cron                      # Dependência do timeshift
+onboard                   # Teclado virtual
 yad                       # Diálogos GUI
 xfce4-genmon-plugin       # Plugin Monitor genérico
 xfce4-pulseaudio-plugin   # Plugin Controle de áudio
@@ -29,18 +36,16 @@ xfce4-docklike-plugin     # Plugin Gerenciamento de janelas estilo dock
 wmctrl                    # Controlador headless de janelas
 mate-polkit               # Interface de processos rootless-root
 network-manager-gnome     # Plugin de redes
-
+                          #
 synaptic                  # Instalador gráfico de .debs
-xubuntu-core              # Estando aqui, evita instalar coisas do gnom
-cron                      # Dependência do timeshift
-
+                          #
 atril                     # Leitor de PDF
 mate-calc                 # Calculadora
 timeshift                 # Ferramenta de backUp
 baobab                    # Analisador de discos
 meld                      # Comparador de arquivos
 unrar                     # Descompactador RAR
-python3-pip               # Instalador de pacotes Python
+                          #
 parole                    # Player de midia
 mousepad                  # Editor de textos
 gigolo                    # Gerenciador de Servidores
@@ -51,10 +56,9 @@ xfce4-screenshooter       # Captura de telas
 mintdrivers               # Gerenciador de drivers do Mint
 webapp-manager            # Criação de webApps
 xarchiver                 # Gerenciador de arquivos compactados
-onboard                   # Teclado virtual
-
+                          #
 boot-repair               # Reparador de boot
 mdadm                     # Suporte a RAID pro boot-repair
-
+                          #
 tumbler-plugins-extra     # Miniaturas para documentos, Imagem RAW e vídeos
 plocate                   # Busca de arquivos por padrões
