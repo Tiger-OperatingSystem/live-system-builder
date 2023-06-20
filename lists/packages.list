@@ -12,6 +12,7 @@ discover
 dkms
 ethtool
 grub-efi-amd64-signed
+grub-pc-bin
 inetutils-ping
 laptop-detect
 lib32gcc-s1
