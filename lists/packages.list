@@ -13,6 +13,7 @@ dkms
 ethtool
 grub-efi-amd64-signed
 grub-pc-bin
+squashfs-tools
 inetutils-ping
 laptop-detect
 lib32gcc-s1

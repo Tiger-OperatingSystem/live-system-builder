@@ -2,7 +2,6 @@
 # é o local indicado para adicionar pacotes do repositório
 gtk2-engines-murrine         # Suporte a temas GTK 2
 gtk2-engines-pixbuf          # Suporte a temas GTK 2
-gdisk                        # Alternativa ao fdisk para discos GPT
 
 ###############################
                              ##
