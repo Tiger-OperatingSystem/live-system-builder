@@ -32,11 +32,8 @@ apt install firefox firefox-locale-pt git -y
 (
       cd /tmp
       git clone https://github.com/Tiger-OperatingSystem/wallpapers.git
-      mv wallpapers/*/* /usr/share/xfce4/backdrops
+      cp -rf wallpapers/* /usr/share/xfce4/backdrops
       rm -rf /tmp wallpapers/
-
-
-
 
       mkdir -p /tmp
 )
