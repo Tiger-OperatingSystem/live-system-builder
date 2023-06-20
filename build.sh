@@ -426,6 +426,11 @@ sed 's|[[:space:]]||g;s|#.*||g' "${HERE}/lists/packages_to_remove_after_install.
   rm -rf chroot/dev/*
   rm -rf chroot/sys/*
   rm -rf chroot/proc/*
+  rm -rf chroot/home/*
+  rm -rf chroot/tmp/*
+
+  mkdir -p chroot/home
+  mkdir -p chroot/tmp
 
   mksquashfs chroot image/casper/filesystem.squashfs -comp xz -noappend
   echo
