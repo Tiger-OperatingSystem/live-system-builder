@@ -38,6 +38,8 @@ wmctrl                    # Controlador headless de janelas
 mate-polkit               # Interface de processos rootless-root
 network-manager-gnome     # Plugin de redes
 mdadm                     # Suporte a RAID pro boot-repair
+gvfs                      # Suporte a sistemas de arquivos virtuais
+dosfstools                # Suporte a sistemas de arquivos FAT (formatação)
                           #
 tumbler-plugins-extra     # Miniaturas para documentos, Imagem RAW e vídeos
 plocate                   # Busca de arquivos por padrões
