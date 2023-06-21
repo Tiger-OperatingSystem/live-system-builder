@@ -1,4 +1,5 @@
 # Os arquivos e pastas listados aqui serão removidos da compilação final
 /usr/share/backgrounds/xfce/
-# /usr/share/xfce4/backdrops/
+/imgs/
+/debootstrap
 /usr/share/xubuntu/applications/xfhelp4.desktop
