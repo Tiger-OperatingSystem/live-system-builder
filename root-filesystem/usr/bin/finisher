@@ -39,3 +39,15 @@ mkdir -p /tmp
 
 apt remove git -y
 apt autoremove -y
+
+wget https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/os-install -O /usr/bin/os-install
+chmod +x /usr/bin/os-install
+
+wget https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/os-install -O /usr/bin/os-install
+chmod +x /usr/bin/os-install
+
+wget https://raw.githubusercontent.com/natanael-b/linstaller/main/linstaller-backend -O /usr/bin/linstaller-backend
+chmod +x /usr/bin/linstaller-backend
+
+wget https://raw.githubusercontent.com/natanael-b/linstaller/main/linstaller-fulldisk-setup -O /usr/bin/linstaller-fulldisk-setup
+chmod +x /usr/bin/linstaller-fulldisk-setup
