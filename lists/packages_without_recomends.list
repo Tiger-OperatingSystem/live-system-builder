@@ -33,6 +33,7 @@ xfce4-pulseaudio-plugin   # Plugin Controle de áudio
 xfce4-whiskermenu-plugin  # Plugin Menu Whisker
 xfce4-battery-plugin      # Plugin Monitor de baterias
 xfce4-places-plugin       # Plugin Diretórios
+xfce4-power-manager       # Plugin monitor da bateria
 xfce4-docklike-plugin     # Plugin Gerenciamento de janelas estilo dock
 wmctrl                    # Controlador headless de janelas
 mate-polkit               # Interface de processos rootless-root
