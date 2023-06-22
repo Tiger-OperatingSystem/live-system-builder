@@ -176,7 +176,7 @@ echo "---------------------------------------------------------"
 echo "  Instalando pacotes sem recomendações"
 echo "---------------------------------------------------------"
 
-chroot "${HOME}/${name}/chroot" apt install -y --fix-missing --no-install-recommends \
+echo y | chroot "${HOME}/${name}/chroot" apt install -y --fix-missing --no-install-recommends \
                     $(sed 's|#.*||g' lists/packages_without_recomends.list | xargs)
 	      
 echo "---------------------------------------------------------"
