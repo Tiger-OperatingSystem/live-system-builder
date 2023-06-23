@@ -34,6 +34,7 @@ xfce4-whiskermenu-plugin  # Plugin Menu Whisker
 xfce4-battery-plugin      # Plugin Monitor de baterias
 xfce4-places-plugin       # Plugin Diretórios
 xfce4-power-manager       # Plugin monitor da bateria
+xfce4-power-manager-plugin # Plugin monitor da bateria parte 2
 xfce4-docklike-plugin     # Plugin Gerenciamento de janelas estilo dock
 wmctrl                    # Controlador headless de janelas
 mate-polkit               # Interface de processos rootless-root
@@ -41,6 +42,7 @@ network-manager-gnome     # Plugin de redes
 mdadm                     # Suporte a RAID pro boot-repair
 gvfs                      # Suporte a sistemas de arquivos virtuais
 dosfstools                # Suporte a sistemas de arquivos FAT (formatação)
+xapp                      # plugin q só incomoda
                           #
 tumbler-plugins-extra     # Miniaturas para documentos, Imagem RAW e vídeos
 plocate                   # Busca de arquivos por padrões
