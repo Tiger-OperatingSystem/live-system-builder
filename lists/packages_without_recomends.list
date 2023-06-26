@@ -40,7 +40,9 @@ wmctrl                    # Controlador headless de janelas
 mate-polkit               # Interface de processos rootless-root
 network-manager-gnome     # Plugin de redes
 mdadm                     # Suporte a RAID pro boot-repair
-gvfs                      # Suporte a sistemas de arquivos virtuais
+gvfs                      # Suporte a sistemas de arquivos virtuais (trash, udisk)
+gvfs-backends             # Suporte a sistemas de arquivos virtuais (afc, afp, archive, cdda, dav, dnssd, ftp, gphoto2, http, mtp, network, sftp, smb e smb-browse)
+gvfs-fuse                 # Suporte a sistemas de arquivos virtuais (fuse)
 dosfstools                # Suporte a sistemas de arquivos FAT (formatação)
 xapp                      # plugin q só incomoda
                           #
