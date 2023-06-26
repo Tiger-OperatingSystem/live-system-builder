@@ -35,6 +35,8 @@ mkdir -p /tmp
       rm -rf /tmp wallpapers/
 )
 
+apt install pop-shop --install-recommends
+
 mkdir -p /tmp
 
 apt remove git -y
