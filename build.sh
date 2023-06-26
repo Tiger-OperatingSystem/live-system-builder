@@ -72,7 +72,7 @@ for dep in ${dependencies[@]}; do
 done
 
 [ ! "${missing}" = "" ] && {
-  apt install ${dependencies[@]} -y
+  echo y | apt install ${dependencies[@]} -y
 }
 
 [ "${splash}" = "true" ]  && {
@@ -188,7 +188,7 @@ echo "---------------------------------------------------------"
   cd "${HOME}/${name}/chroot/debian_single_debian_packages"
   sed 's|#.*||g' "${HERE}/lists/single_debian_package_files.list" | sed '/^[[:space:]]*$/d' | sed 's|^|wget |g' | sh
 
-  chroot "${HOME}/${name}/chroot" bash -c 'apt install -y "/debian_single_debian_packages"/*'
+  echo y | chroot "${HOME}/${name}/chroot" bash -c 'apt install -y "/debian_single_debian_packages"/*'
 
   cd "${HERE}"
   
@@ -199,8 +199,8 @@ echo "---------------------------------------------------------"
   echo "---------------------------------------------------------"
   echo "  Instalando pacotes 32 bit"
   echo "---------------------------------------------------------"
-  chroot "${HOME}/${name}/chroot" apt install -y    \
-       $(sed 's|#.*||g' lists/packages_32bits.list | xargs)
+  echo y | chroot "${HOME}/${name}/chroot" apt install -y    \
+              $(sed 's|#.*||g' lists/packages_32bits.list | xargs)
 }
 
 [ -f "${HOME}/${name}/chroot/usr/bin/finisher" ] && {
