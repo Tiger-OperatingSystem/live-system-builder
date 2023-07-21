@@ -70,5 +70,6 @@ webapp-manager            # Criação de webApps
 xarchiver                 # Gerenciador de arquivos compactados
                           #
 boot-repair               # Reparador de boot
-bashtop                   # versão atualizada do comando top
-exa                       # versão atualizada do comando ls
+bashtop                   # Versão atualizada do comando top
+exa                       # Versão atualizada do comando ls
+dbus-x11                  # Lançador dbus
