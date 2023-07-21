@@ -46,7 +46,7 @@ plymouth
 tcpdump
 ufw
 psmisc
-pavulcontrol
+pavucontrol
 
 
 # Lista de pacotes completos do Tiger OS começa aqui
