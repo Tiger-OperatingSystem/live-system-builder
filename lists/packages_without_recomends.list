@@ -72,4 +72,4 @@ xarchiver                 # Gerenciador de arquivos compactados
 boot-repair               # Reparador de boot
 bashtop                   # Versão atualizada do comando top
 exa                       # Versão atualizada do comando ls
-dbus-x11                  # Lançador dbus
+gvfs-backends             # Screenhots na loja
