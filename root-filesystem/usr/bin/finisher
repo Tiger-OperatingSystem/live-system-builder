@@ -51,5 +51,8 @@ chmod +x /usr/bin/os-install
 wget https://raw.githubusercontent.com/natanael-b/linstaller/main/linstaller-backend -O /usr/bin/linstaller-backend
 chmod +x /usr/bin/linstaller-backend
 
+wget https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/os-install.desktop -O /usr/share/applications/os-install.desktop
+chmod +x /usr/share/applications/os-install.desktop
+
 wget https://raw.githubusercontent.com/natanael-b/linstaller/main/linstaller-fulldisk-setup -O /usr/bin/linstaller-fulldisk-setup
 chmod +x /usr/bin/linstaller-fulldisk-setup
