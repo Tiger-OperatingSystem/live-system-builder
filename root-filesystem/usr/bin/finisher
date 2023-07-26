@@ -62,3 +62,6 @@ chmod +x /usr/bin/linstaller-fulldisk-setup
         ln -fs Pop-dark "${theme}"
       done
 )
+
+
+echo -e '\n' | apt install -f  || true >/dev/null 2>&1
