@@ -36,6 +36,7 @@ xfce4-places-plugin       # Plugin Diretórios
 xfce4-power-manager       # Gerenciador de energia
 xfce4-power-manager-plugins # Plugin monitor da baterias
 xfce4-docklike-plugin     # Plugin Gerenciamento de janelas estilo dock
+thunar-archive-plugin     # Plugin compactador de arquivos Thunar
 wmctrl                    # Controlador headless de janelas
 mate-polkit               # Interface de processos rootless-root
 network-manager-gnome     # Plugin de redes
@@ -57,6 +58,7 @@ timeshift                 # Ferramenta de backUp
 baobab                    # Analisador de discos
 meld                      # Comparador de arquivos
 unrar                     # Descompactador RAR
+xfce4-taskmanager         # Gerenciador de tarefas
                           #
 parole                    # Player de midia
 mousepad                  # Editor de textos
@@ -77,4 +79,3 @@ p11-kit                   # Suporte a criptografia Chave-pública #11
 xdg-desktop-portal        # Portal desktop base
 xdg-desktop-portal-gtk    # Portal desktop suporte a GTK
 flatpak                   # Suporte a Flatpaks
-thunar-archive-plugin     # Plugin compactador de arquivos Thunar
