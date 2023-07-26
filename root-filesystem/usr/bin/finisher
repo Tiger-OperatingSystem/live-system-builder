@@ -34,9 +34,6 @@ mkdir -p /tmp
       cp -rf wallpapers/* /usr/share/xfce4/backdrops
       rm -rf /tmp wallpapers/
 )
-
-apt install pop-shop --install-recommends
-
 mkdir -p /tmp
 
 apt remove git -y
@@ -56,3 +53,12 @@ chmod +x /usr/share/applications/os-install.desktop
 
 wget https://raw.githubusercontent.com/natanael-b/linstaller/main/linstaller-fulldisk-setup -O /usr/bin/linstaller-fulldisk-setup
 chmod +x /usr/bin/linstaller-fulldisk-setup
+
+(
+      flatpak remote-add --if-not-exists flathub "https://dl.flathub.org/repo/flathub.flatpakrepo"
+      cd /usr/lib/pop-things/shop/usr/share/themes
+      for theme in /usr/share/themes/*; do
+        theme=$(basename "${theme}")
+        ln -fs Pop-dark "${theme}"
+      done
+)
