@@ -70,6 +70,7 @@ xfce4-screenshooter       # Captura de telas
 mintdrivers               # Gerenciador de drivers do Mint
 webapp-manager            # Criação de webApps
 xarchiver                 # Gerenciador de arquivos compactados
+thunar-archive-plugin     # Opções de descompactação gráfica
                           #
 boot-repair               # Reparador de boot
 bashtop                   # Versão atualizada do comando top
