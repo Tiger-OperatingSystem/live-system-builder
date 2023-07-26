@@ -73,3 +73,7 @@ boot-repair               # Reparador de boot
 bashtop                   # Versão atualizada do comando top
 exa                       # Versão atualizada do comando ls
 gvfs-backends             # Screenhots na loja
+p11-kit                   # Suporte a criptografia Chave-pública #11
+xdg-desktop-portal        # Portal desktop base
+xdg-desktop-portal-gtk    # Portal desktop suporte a GTK
+flatpak                   # Suporte a Flatpaks
