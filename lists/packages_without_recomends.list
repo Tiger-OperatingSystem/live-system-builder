@@ -77,3 +77,4 @@ p11-kit                   # Suporte a criptografia Chave-pública #11
 xdg-desktop-portal        # Portal desktop base
 xdg-desktop-portal-gtk    # Portal desktop suporte a GTK
 flatpak                   # Suporte a Flatpaks
+thunar-archive-plugin     # Plugin compactador de arquivos Thunar
