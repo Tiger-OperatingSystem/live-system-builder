@@ -170,7 +170,7 @@ echo "---------------------------------------------------------"
 echo "  Instalando pacotes com recomendações"
 echo "---------------------------------------------------------"
 
-chroot "${HOME}/${name}/chroot" apt install -y --fix-missing $(sed 's|#.*||g' lists/packages.list | xargs)
+echo y | chroot "${HOME}/${name}/chroot" apt install -y --fix-missing $(sed 's|#.*||g' lists/packages.list | xargs)
 
 echo "---------------------------------------------------------"
 echo "  Instalando pacotes sem recomendações"
@@ -258,7 +258,7 @@ echo "---------------------------------------------------------"
 echo "  Instalando atualizações, se houver"
 echo "---------------------------------------------------------"
 
-chroot "${HOME}/${name}/chroot" apt upgrade -y
+echo y | chroot "${HOME}/${name}/chroot" apt upgrade -y
 
 [ -f "lists/packages_to_remove_contents.list" ] && {
   echo "---------------------------------------------------------"
