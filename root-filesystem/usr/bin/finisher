@@ -45,6 +45,10 @@ chmod +x /usr/bin/os-install
 wget https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/os-install -O /usr/bin/os-install
 chmod +x /usr/bin/os-install
 
+wget https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/post-install -O /usr/bin/post-install
+chmod +x /usr/bin/post-install
+
+
 wget https://raw.githubusercontent.com/natanael-b/linstaller/main/linstaller-backend -O /usr/bin/linstaller-backend
 chmod +x /usr/bin/linstaller-backend
 
