@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yes | sudo apt remove boot-repair casper || true
+yes | apt remove boot-repair casper 
 
 sed -i "s|autologin-user=.*||g" /etc/lightdm/lightdm.conf
 
