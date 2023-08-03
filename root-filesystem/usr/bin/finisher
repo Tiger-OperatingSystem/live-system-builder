@@ -76,7 +76,7 @@ yes | apt dist-upgrade || true >/dev/null 2>&1
 (
   cd /etc
 
-  rm _issue _issue.net _lsb-release
+  rm issue issue.net lsb-release
 
   mv _issue issue
   mv _issue.net issue.net
