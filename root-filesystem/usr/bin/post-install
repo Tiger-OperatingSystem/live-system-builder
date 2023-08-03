@@ -1,0 +1,12 @@
+#!/bin/bash
+
+yes | sudo apt remove boot-repair casper || true
+
+sed -i "s|autologin-user=.*||g" /etc/lightdm/lightdm.conf
+
+[ "${1}" = "--auto-login" ] && {
+  (
+    echo "autologin-user=${2}"
+    echo
+  ) >> /etc/lightdm/lightdm.conf
+}
