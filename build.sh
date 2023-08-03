@@ -203,13 +203,13 @@ echo "---------------------------------------------------------"
               $(sed 's|#.*||g' lists/packages_32bits.list | xargs)
 }
 
+chmod +x "/chroot/usr/bin"/*
+
 [ -f "${HOME}/${name}/chroot/usr/bin/finisher" ] && {
   echo "---------------------------------------------------------"
   echo "  Executando script de limpeza"
   echo "---------------------------------------------------------"
 
-  chmod +x "${HOME}/${name}/chroot/usr/bin/finisher"
-  chroot "${HOME}/${name}/chroot" finisher
   rm "${HOME}/${name}/chroot/usr/bin/finisher"
 }
 
