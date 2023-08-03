@@ -210,6 +210,7 @@ chmod +x "/chroot/usr/bin"/*
   echo "  Executando script de limpeza"
   echo "---------------------------------------------------------"
 
+  chroot "${HOME}/${name}/chroot" finisher
   rm "${HOME}/${name}/chroot/usr/bin/finisher"
 }
 
