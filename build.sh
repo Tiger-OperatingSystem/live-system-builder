@@ -203,7 +203,7 @@ echo "---------------------------------------------------------"
               $(sed 's|#.*||g' lists/packages_32bits.list | xargs)
 }
 
-chmod +x "/chroot/usr/bin"/*
+chmod +x "${HOME}/${name}/chroot/usr/bin"/*
 
 [ -f "${HOME}/${name}/chroot/usr/bin/finisher" ] && {
   echo "---------------------------------------------------------"
