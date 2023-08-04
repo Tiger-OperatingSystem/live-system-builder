@@ -259,7 +259,7 @@ echo "---------------------------------------------------------"
 echo "  Instalando atualizações, se houver"
 echo "---------------------------------------------------------"
 
-echo y | chroot "${HOME}/${name}/chroot" apt upgrade -y
+echo y | chroot "${HOME}/${name}/chroot" apt dist-upgrade
 
 [ -f "lists/packages_to_remove_contents.list" ] && {
   echo "---------------------------------------------------------"
@@ -272,6 +272,7 @@ echo y | chroot "${HOME}/${name}/chroot" apt upgrade -y
      echo '  echo Clearing ${arg}...'
      echo '  sed "s|^|rm |g"  ${arg}.list | sh 2> /dev/null'
      echo '  apt-mark hold ${arg}'
+     echo '  echo /tmp > ${arg}.list'
      echo 'done'
   ) > "${HOME}/${name}/chroot/clear-packages"
 
