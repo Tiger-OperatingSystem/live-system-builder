@@ -23,8 +23,6 @@ apt install firefox firefox-locale-pt git -y
       git clone https://github.com/Tiger-OperatingSystem/icons.git
       mv icons/*/* /usr/share/icons
       rm -rf /tmp/icons/
-
-      find /usr/share/icons -maxdepth 1 -type d -exec update-icon-caches {} \; 
 )
 
 (
@@ -41,6 +39,8 @@ apt install firefox firefox-locale-pt git -y
     }
   done
 )
+
+find /usr/share/icons -maxdepth 1 -type d -exec update-icon-caches {} \; 
 
 (
       git clone https://github.com/Tiger-OperatingSystem/wallpapers.git
