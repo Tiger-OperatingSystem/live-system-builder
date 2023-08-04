@@ -24,19 +24,20 @@ apt install firefox firefox-locale-pt git -y
       mv icons/*/* /usr/share/icons
       rm -rf /tmp/icons/
 )
-
 (
-  cd /usr/share/icons/Orange-Dark/
-  for dir in ./*; do
-    [ -d "${dir}" ] && {
-      dir=$(basename ${dir})
-      [ -d "/usr/share/icons/Orange-Light/${dir}/apps" ] && {
-        [ ! "${dir}" = "symbolic" ] && {
-          sudo rm -rf "${dir}/apps"
-          sudo ln -s "/usr/share/icons/Orange-Light/${dir}/apps" "${dir}/apps"
+  for color  in in /usr/share/icons/*-Dark;do
+    cd ${color}
+    for dir in ./*; do
+      [ -d "${dir}" ] && {
+        dir=$(basename ${dir})
+        [ -d "/usr/share/icons/Orange-Light/${dir}/apps" ] && {
+          [ ! "${dir}" = "symbolic" ] && {
+            sudo rm -rf "${dir}/apps"
+            sudo ln -s "/usr/share/icons/Orange-Light/${dir}/apps" "${dir}/apps"
+          }
         }
       }
-    }
+    done
   done
 )
 
