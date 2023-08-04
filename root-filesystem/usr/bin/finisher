@@ -42,50 +42,6 @@ apt install firefox firefox-locale-pt git -y
   done
 )
 
-(
-  for color  in in /usr/share/icons/*-Light;do
-    cd ${color}
-    for dir in ./*; do
-      [ -d "${dir}" ] && {
-        dir=$(basename ${dir})
-        [ -d "/usr/share/icons/Orange-Light/${dir}/apps" ] && {
-          [ ! "${dir}" = "symbolic" ] && {
-            sudo rm -rf "${dir}/apps"
-            sudo ln -s "/usr/share/icons/Orange-Light/${dir}/apps" "${dir}/apps"
-          }
-        }
-      }
-    done
-  done
-)
-
-
-(
-  cd /usr/share/icons/Orange-Dark/
-
-  for dir in ./*; do
-    dir=$(basename ${dir})
-    echo "${dir}" | grep -q "scalable" || {
-      for color in /usr/share/icons/*-Dark/; do
-        ln -s "/usr/share/icons/Orange-Dark/${dir}" ${color}/${dir}
-      done
-    }
-  done
-)
-
-(
-  cd /usr/share/icons/Orange-Light/
-
-  for dir in ./*; do
-    dir=$(basename ${dir})
-    echo "${dir}" | grep -q "scalable" || {
-      for color in /usr/share/icons/*-Light/; do
-        ln -s "/usr/share/icons/Orange-Light/${dir}" ${color}/${dir}
-      done
-    }
-  done
-)
-
 find /usr/share/icons -maxdepth 1 -type d -exec update-icon-caches {} \; 
 
 (
