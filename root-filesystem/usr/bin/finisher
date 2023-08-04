@@ -22,20 +22,31 @@ apt install firefox firefox-locale-pt git -y
       cd /tmp
       git clone https://github.com/Tiger-OperatingSystem/icons.git
       mv icons/*/* /usr/share/icons
-      rm -rf /tmp icons/
+      rm -rf /tmp/icons/
 
       find /usr/share/icons -maxdepth 1 -type d -exec update-icon-caches {} \; 
 )
 
-cd .
-mkdir -p /tmp
-cd .
+(
+  cd /usr/share/icons/Orange-Dark/
+  for dir in ./*; do
+    [ -d "${dir}" ] && {
+      dir=$(basename ${dir})
+      [ -d "/usr/share/icons/Orange-Light/${dir}/apps" ] && {
+        [ ! "${dir}" = "symbolic" ] && {
+          sudo rm -rf "${dir}/apps"
+          sudo ln -s "/usr/share/icons/Orange-Light/${dir}/apps" "${dir}/apps"
+        }
+      }
+    }
+  done
+)
+
 (
       git clone https://github.com/Tiger-OperatingSystem/wallpapers.git
       cp -rf wallpapers/* /usr/share/xfce4/backdrops
-      rm -rf /tmp wallpapers/
+      rm -rf /tmp/wallpapers/
 )
-mkdir -p /tmp
 
 apt remove git -y
 apt autoremove -y
