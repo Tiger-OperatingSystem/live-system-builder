@@ -27,8 +27,9 @@ apt install firefox firefox-locale-pt git -y
       find /usr/share/icons -maxdepth 1 -type d -exec update-icon-caches {} \; 
 )
 
+cd .
 mkdir -p /tmp
-
+cd .
 (
       git clone https://github.com/Tiger-OperatingSystem/wallpapers.git
       cp -rf wallpapers/* /usr/share/xfce4/backdrops

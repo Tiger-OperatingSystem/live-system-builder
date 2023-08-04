@@ -1,8 +1,27 @@
 #!/bin/bash
 
-yes | apt remove boot-repair casper 
 
 sed -i "s|autologin-user=.*||g" /etc/lightdm/lightdm.conf
+
+(
+  cd /var/lib/dpkg/info
+  for file in $(cat casper.list boot-repair.list | sort | uniq); do
+    [ -f "${file}" ] && {
+      rm  -v "${file}"
+      echo "${file}" | tee /dev/stderr
+    }
+  done
+
+  echo "/tmp" | tee boot-repair-disabled.list
+  echo "/tmp" | tee casper-disabled.list
+
+  rm casper.list boot-repair.list
+
+  cd /var/lib/dpkg/
+  sed -i "s|Package: casper|Package: casper-disabled|g" status || true
+  sed -i "s|Package: boot-repair|Package: boot-repair-disabled|g"  status || true
+
+)
 
 [ "${1}" = "--auto-login" ] && {
   (
@@ -10,3 +29,10 @@ sed -i "s|autologin-user=.*||g" /etc/lightdm/lightdm.conf
     echo
   ) >> /etc/lightdm/lightdm.conf
 }
+
+rm -v /usr/bin/linstaller-backend
+rm -v /usr/bin/linstaller-fulldisk-setup
+rm -v /usr/bin/os-install
+rm -v /usr/bin/post-install
+rm -v /usr/share/applications/os-install.desktop
+
