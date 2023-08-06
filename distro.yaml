@@ -1,6 +1,6 @@
 name:     TigerOS 23.1  # Nome do sistema
 base:     jammy        # Release do Ubuntu
 keyboard: br           # Layout do teclado
-mirror:   br           # Espelho do Ubuntu
+mirror:   us           # Espelho do Ubuntu
 user:     tiger        # Usuário modo live
 host:     live         # Nome de host padrão
