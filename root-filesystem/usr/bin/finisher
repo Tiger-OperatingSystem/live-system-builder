@@ -61,10 +61,10 @@ chmod +x /usr/bin/post-install
 
 mkdir -p /usr/share/tiger-os/
 
-wget https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/os-install -O /usr/share/tiger-os/lista_paises.csv
+wget https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/lista_paises.csv -O /usr/share/tiger-os/lista_paises.csv
 chmod +x /usr/share/tiger-os/lista_paises.csv
 
-wget https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/os-install -O /usr/share/tiger-os/timezones_lista.csv
+wget https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/timezones_lista.csv -O /usr/share/tiger-os/timezones_lista.csv
 chmod +x /usr/share/tiger-os/timezones_lista.csv
 
 wget https://raw.githubusercontent.com/natanael-b/linstaller/main/linstaller-backend -O /usr/bin/linstaller-backend
