@@ -20,7 +20,7 @@ host=$(sed     's|[[:space:]]||g;s|#.*||g' distro.yaml | grep -m1 ^"host:"     |
 debian=$(sed   's|[[:space:]]||g;s|#.*||g' distro.yaml | grep -m1 ^"debian:"   | cut -d: -f2)
 
 echo "---------------------------------------------------------"
-echo "  Verificando "
+echo "  Verificando pontos de montagem"
 echo "---------------------------------------------------------"
 
 grub_name=$(sed 's|#.*||g' distro.yaml | grep -m1 ^"name:" | cut -d: -f2 | sed 's/^[[:blank:]]*//;s/[[:blank:]]*$//')
@@ -85,11 +85,10 @@ done
   splash=""
 }
 
-echo "---------------------------------------------------------"
-echo "  Iniciando debootstrap"
-echo "---------------------------------------------------------"
-
 [ "${SKIP_DEBOOSTRAP}" = 0 ] && {
+  echo "---------------------------------------------------------"
+  echo "  Iniciando debootstrap"
+  echo "---------------------------------------------------------"
   debootstrap --arch=amd64 --variant=minbase          \
               --components=main,multiverse,universe   \
               "${version}" "${HOME}/${name}/chroot"
@@ -163,7 +162,7 @@ EOF
 }
 
 echo "---------------------------------------------------------"
-echo "  Sincronizando repositórios"
+echo "  Sincronizando repositórios fase 1"
 echo "---------------------------------------------------------"
 
 chroot ${HOME}/${name}/chroot apt update
@@ -329,8 +328,6 @@ echo y | chroot "${HOME}/${name}/chroot" apt dist-upgrade
 echo "---------------------------------------------------------"
 echo "  Ativando boot splash"
 echo "---------------------------------------------------------"
-
-echo "${splash}"
 
 chmod +x "${HOME}/${name}/chroot/usr/share/plymouth/themes/boot-splash/boot-splash.plymouth"
 chmod +x "${HOME}/${name}/chroot/usr/share/plymouth/themes/boot-splash/boot-splash.script"
