@@ -77,7 +77,6 @@ wget https://raw.githubusercontent.com/natanael-b/linstaller/main/linstaller-ful
 chmod +x /usr/bin/linstaller-fulldisk-setup
 
 (
-      flatpak remote-add --if-not-exists flathub "https://dl.flathub.org/repo/flathub.flatpakrepo"
       cd /usr/lib/pop-things/shop/usr/share/themes
       for theme in /usr/share/themes/*; do
         theme=$(basename "${theme}")
