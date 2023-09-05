@@ -172,7 +172,7 @@ chroot ${HOME}/${name}/chroot apt update
   echo "  Configurando PPAs"
   echo "---------------------------------------------------------"
   chroot "${HOME}/${name}/chroot" apt install -y software-properties-common
-  sed '/^[[:space:]]*$/d' lists/ppas.list | sed 's|#.*||g' |sed "s|^|chroot \"${HOME}/${name}/chroot\" add-apt-repository -y |g" | sh
+  sed '/^[[:space:]]*$/d' lists/ppas.list | sed 's|#.*||g' | sed '/^$/d' | sed "s|^|chroot \"${HOME}/${name}/chroot\" add-apt-repository -y |g" | sh
 }
 
 echo "---------------------------------------------------------"
