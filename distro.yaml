@@ -1,7 +1,8 @@
 name:     TigerOS 23.1  # Nome do sistema
 base:     jammy         # Release do Ubuntu ou Debian
+debian:   false         # Coloque true para usar o Debian de base
+splash:   true          # se true ativa o Plymounth em modo live
 keyboard: br            # Layout do teclado
 mirror:   us            # Espelho do Ubuntu (ignorado se debian for true)
-debian:   false         # Coloque true para usar o Debian de base
 user:     tiger         # Usuário modo live
 host:     live          # Nome de host padrão
