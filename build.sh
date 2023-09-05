@@ -17,6 +17,7 @@ keyboard=$(sed 's|[[:space:]]||g;s|#.*||g' distro.yaml | grep -m1 ^"keyboard:" |
 mirror=$(sed   's|[[:space:]]||g;s|#.*||g' distro.yaml | grep -m1 ^"mirror:"   | cut -d: -f2)
 user=$(sed     's|[[:space:]]||g;s|#.*||g' distro.yaml | grep -m1 ^"user:"     | cut -d: -f2)
 host=$(sed     's|[[:space:]]||g;s|#.*||g' distro.yaml | grep -m1 ^"host:"     | cut -d: -f2)
+debian=$(sed   's|[[:space:]]||g;s|#.*||g' distro.yaml | grep -m1 ^"debian:"   | cut -d: -f2)
 
 echo "---------------------------------------------------------"
 echo "  Verificando "
@@ -144,6 +145,15 @@ deb http://${mirror}.archive.ubuntu.com/ubuntu/ ${version}-security main restric
 deb http://${mirror}.archive.ubuntu.com/ubuntu/ ${version}-updates main restricted universe multiverse
 EOF
 
+[ "${debian}" = "true" ] && {
+rm "${HOME}/${name}/chroot/etc/apt/sources.list"
+cat <<EOF | tee "${HOME}/${name}/chroot/etc/apt/sources.list"
+deb http://deb.debian.org/debian/ stable main contrib non-free
+deb http://deb.debian.org/debian/ stable-updates main contrib non-free
+deb http://deb.debian.org/debian-security stable/updates main
+deb http://ftp.debian.org/debian ${version}-backports main
+EOF
+}
 
 [ -f "lists/packages_32bits.list" ] && {
   echo "---------------------------------------------------------"
