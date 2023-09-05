@@ -216,7 +216,7 @@ echo "---------------------------------------------------------"
   echo "---------------------------------------------------------"
   echo "  Configurando Flatpaks"
   echo "---------------------------------------------------------"
-  flatpak remote-add --if-not-exists flathub "https://dl.flathub.org/repo/flathub.flatpakrepo"
+  chroot "${HOME}/${name}/chroot" flatpak remote-add --if-not-exists flathub "https://dl.flathub.org/repo/flathub.flatpakrepo"
   sed '/^[[:space:]]*$/d' lists/flathub.list | sed 's|#.*||g' | sed '/^$/d' | sed "s|^|chroot \"${HOME}/${name}/chroot\" flatpak install -y |g" | sh
 }
 
