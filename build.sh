@@ -414,23 +414,29 @@ sed -i '/os-prober/d'                  image/casper/filesystem.manifest-desktop
 
 sed 's|[[:space:]]||g;s|#.*||g' "${HERE}/lists/packages_to_remove_after_install.list" | sort | tee image/casper/filesystem.manifest-remove
 
+echo "---------------------------------------------------------"
+echo "  Desfazendo pontos de montagem"
+echo "---------------------------------------------------------"
+echo
+
+umount -l "${HOME}/${name}/chroot/dev/pts"
+umount -l "${HOME}/${name}/chroot/dev"
+umount -l "${HOME}/${name}/chroot/sys"
+umount -l "${HOME}/${name}/chroot/proc"
+umount -l "${HOME}/${name}/chroot/run"
+
+umount -l "${HOME}/${name}/chroot/dev/pts"
+umount -l "${HOME}/${name}/chroot/dev"
+umount -l "${HOME}/${name}/chroot/sys"
+umount -l "${HOME}/${name}/chroot/proc"
+umount -l "${HOME}/${name}/chroot/run"
+
 [ "${SKIP_SQUASHFS}" = 0 ] && {
   echo
   echo "---------------------------------------------------------"
   echo "  Comprimindo imagem do sistema"
   echo "---------------------------------------------------------"
   echo
-  umount -l "${HOME}/${name}/chroot/dev/pts"
-  umount -l "${HOME}/${name}/chroot/dev"
-  umount -l "${HOME}/${name}/chroot/sys"
-  umount -l "${HOME}/${name}/chroot/proc"
-  umount -l "${HOME}/${name}/chroot/run"
-
-  umount -l "${HOME}/${name}/chroot/dev/pts"
-  umount -l "${HOME}/${name}/chroot/dev"
-  umount -l "${HOME}/${name}/chroot/sys"
-  umount -l "${HOME}/${name}/chroot/proc"
-  umount -l "${HOME}/${name}/chroot/run"
 
   rm -rf chroot/dev/*
   rm -rf chroot/sys/*
