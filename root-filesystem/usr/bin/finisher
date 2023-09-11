@@ -23,7 +23,7 @@ apt install firefox firefox-locale-pt git -y
       git clone https://github.com/Tiger-OperatingSystem/icons.git
       mv icons/*/* /usr/share/icons
       rm -rf /tmp/icons/
-)
+) > /dev/null
 
 (
   for color  in in /usr/share/icons/*-Dark;do
@@ -53,27 +53,27 @@ find /usr/share/icons -maxdepth 1 -type d -exec update-icon-caches {} \;
 apt remove git -y
 apt autoremove -y
 
-wget https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/os-install -O /usr/bin/os-install
+wget -q https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/os-install -O /usr/bin/os-install
 chmod +x /usr/bin/os-install
 
-wget https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/os-install -O /usr/bin/post-install
+wget -q https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/os-install -O /usr/bin/post-install
 chmod +x /usr/bin/post-install
 
 mkdir -p /usr/share/tiger-os/
 
-wget https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/lista_paises.csv -O /usr/share/tiger-os/lista_paises.csv
+wget -q https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/lista_paises.csv -O /usr/share/tiger-os/lista_paises.csv
 chmod +x /usr/share/tiger-os/lista_paises.csv
 
-wget https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/timezones_lista.csv -O /usr/share/tiger-os/timezones_lista.csv
+wget -q https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/timezones_lista.csv -O /usr/share/tiger-os/timezones_lista.csv
 chmod +x /usr/share/tiger-os/timezones_lista.csv
 
-wget https://raw.githubusercontent.com/natanael-b/linstaller/main/linstaller-backend -O /usr/bin/linstaller-backend
+wget -q https://raw.githubusercontent.com/natanael-b/linstaller/main/linstaller-backend -O /usr/bin/linstaller-backend
 chmod +x /usr/bin/linstaller-backend
 
-wget https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/os-install.desktop -O /usr/share/applications/os-install.desktop
+wget -q https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/os-install.desktop -O /usr/share/applications/os-install.desktop
 chmod +x /usr/share/applications/os-install.desktop
 
-wget https://raw.githubusercontent.com/natanael-b/linstaller/main/linstaller-fulldisk-setup -O /usr/bin/linstaller-fulldisk-setup
+wget -q https://raw.githubusercontent.com/natanael-b/linstaller/main/linstaller-fulldisk-setup -O /usr/bin/linstaller-fulldisk-setup
 chmod +x /usr/bin/linstaller-fulldisk-setup
 
 (
@@ -103,8 +103,8 @@ yes | apt dist-upgrade || true >/dev/null 2>&1
 (
   mkdir -p /var/lib/curso-linux/videos/
   cd  /var/lib/curso-linux/videos/
-  wget https://github.com/Tiger-OperatingSystem/alerta-videos/raw/main/Aula1.tar.xz -O -    | tar Jxf -
-  wget https://github.com/Tiger-OperatingSystem/alerta-videos/raw/main/Aula%202.tar.xz -O - | tar Jxf -
-  wget https://github.com/Tiger-OperatingSystem/alerta-videos/raw/main/Aula%203.tar.xz -O - | tar Jxf -
-  wget https://github.com/Tiger-OperatingSystem/alerta-videos/raw/main/Aula%204.tar.xz -O - | tar Jxf -
+  wget -q https://github.com/Tiger-OperatingSystem/alerta-videos/raw/main/Aula1.tar.xz -O -    | tar Jxf -
+  wget -q https://github.com/Tiger-OperatingSystem/alerta-videos/raw/main/Aula%202.tar.xz -O - | tar Jxf -
+  wget -q https://github.com/Tiger-OperatingSystem/alerta-videos/raw/main/Aula%203.tar.xz -O - | tar Jxf -
+  wget -q https://github.com/Tiger-OperatingSystem/alerta-videos/raw/main/Aula%204.tar.xz -O - | tar Jxf -
 )
