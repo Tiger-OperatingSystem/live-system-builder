@@ -99,3 +99,12 @@ yes | apt dist-upgrade || true >/dev/null 2>&1
   mv _issue.net issue.net
   mv _lsb-release lsb-release
 )
+
+(
+  mkdir -p /var/lib/curso-linux/videos/
+  cd  /var/lib/curso-linux/videos/
+  wget https://github.com/Tiger-OperatingSystem/alerta-videos/raw/main/Aula1.tar.xz -O -    | tar Jxf -
+  wget https://github.com/Tiger-OperatingSystem/alerta-videos/raw/main/Aula%202.tar.xz -O - | tar Jxf -
+  wget https://github.com/Tiger-OperatingSystem/alerta-videos/raw/main/Aula%203.tar.xz -O - | tar Jxf -
+  wget https://github.com/Tiger-OperatingSystem/alerta-videos/raw/main/Aula%204.tar.xz -O - | tar Jxf -
+)
