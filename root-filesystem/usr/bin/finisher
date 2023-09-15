@@ -5,6 +5,8 @@
 # instalar ou remover gerenciadores de pacotes alternativos
 # etc...
 
+# tar -xJf Green-Dark.tar.xz -C Green-Dark
+
 pip3 install bigbashview==3.6.6
 
 echo '
