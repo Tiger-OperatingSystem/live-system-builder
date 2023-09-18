@@ -195,7 +195,7 @@ echo "---------------------------------------------------------"
 (
   mkdir -p "${HOME}/${name}/chroot/debian_single_debian_packages"
   cd "${HOME}/${name}/chroot/debian_single_debian_packages"
-  sed 's|#.*||g' "${HERE}/lists/single_debian_package_files.list" | sed '/^[[:space:]]*$/d' | sed 's|^|wget |g' | sh
+  sed 's|#.*||g' "${HERE}/lists/single_debian_package_files.list" | sed '/^[[:space:]]*$/d' | sed 's|^|wget  -q --show-progress  |g' | sh
 
   echo y | chroot "${HOME}/${name}/chroot" bash -c 'apt install -y "/debian_single_debian_packages"/*'
 
