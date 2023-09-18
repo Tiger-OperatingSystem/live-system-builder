@@ -20,12 +20,20 @@ echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codenam
       
 apt install firefox firefox-locale-pt git -y
 
-(
-      cd /tmp
-      git clone https://github.com/Tiger-OperatingSystem/icons.git
-      mv icons/*/* /usr/share/icons
-      rm -rf /tmp/icons/
-) > /dev/null
+
+colors=( Green-Dark Green-Light Lime-Dark Lime-Light Orange-Dark Orange-Light Pink-Dark Pink-Light Purple-Dark Purple-Light
+         Red-Dark Red-Light Yellow-Dark Yellow-Light )
+
+for color  in in ${colors[@]};do
+  echo ${color}
+  (
+     mkdir -p /usr/share/icons/${color}
+     cd ${color}
+     wget -q --show-progress  https://github.com/Tiger-OperatingSystem/icons/releases/download/tema/${color}.tar.xz
+     tar -xJf ${color}.tar.xz -C .
+     rm ${color}.tar.xz
+  )
+done
 
 (
   for color  in in /usr/share/icons/*-Dark;do
