@@ -30,6 +30,10 @@ for color  in ${colors[@]};do
      wget -q --show-progress  https://github.com/Tiger-OperatingSystem/icons/releases/download/tema/${color}.tar.xz
      tar -xJf ${color}.tar.xz -C .
      rm ${color}.tar.xz
+
+     mkdir -p "/usr/share/icons/${color}/scalable/apps"
+     cd "/usr/share/icons/${color}/scalable/apps"
+     wget -q https://raw.githubusercontent.com/Tiger-OperatingSystem/os-installer/main/tigerInstall.svg
   )
 done
 
