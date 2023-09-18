@@ -20,37 +20,19 @@ echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codenam
       
 apt install firefox firefox-locale-pt git -y
 
-
 colors=( Green-Dark Green-Light Lime-Dark Lime-Light Orange-Dark Orange-Light Pink-Dark Pink-Light Purple-Dark Purple-Light
          Red-Dark Red-Light Yellow-Dark Yellow-Light )
 
 for color  in in ${colors[@]};do
   echo ${color}
   (
-     mkdir -p /usr/share/icons/${color}
-     cd ${color}
+     mkdir -p "/usr/share/icons/${color}"
+     cd "/usr/share/icons/${color}"
      wget -q --show-progress  https://github.com/Tiger-OperatingSystem/icons/releases/download/tema/${color}.tar.xz
      tar -xJf ${color}.tar.xz -C .
      rm ${color}.tar.xz
   )
 done
-
-(
-  for color  in in /usr/share/icons/*-Dark;do
-    cd ${color}
-    for dir in ./*; do
-      [ -d "${dir}" ] && {
-        dir=$(basename ${dir})
-        [ -d "/usr/share/icons/Orange-Light/${dir}/apps" ] && {
-          [ ! "${dir}" = "symbolic" ] && {
-            sudo rm -rf "${dir}/apps"
-            sudo ln -s "/usr/share/icons/Orange-Light/${dir}/apps" "${dir}/apps"
-          }
-        }
-      }
-    done
-  done
-)
 
 find /usr/share/icons -maxdepth 1 -type d -exec update-icon-caches {} \; 
 
@@ -58,7 +40,7 @@ find /usr/share/icons -maxdepth 1 -type d -exec update-icon-caches {} \;
       git clone https://github.com/Tiger-OperatingSystem/wallpapers.git
       cp -rf wallpapers/* /usr/share/xfce4/backdrops
       rm -rf /tmp/wallpapers/
-)
+) 2>&1 > /dev/null
 
 apt remove git -y
 apt autoremove -y
