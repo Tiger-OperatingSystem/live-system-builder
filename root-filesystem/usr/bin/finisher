@@ -24,7 +24,6 @@ colors=( Green-Dark Green-Light Lime-Dark Lime-Light Orange-Dark Orange-Light Pi
          Red-Dark Red-Light Yellow-Dark Yellow-Light )
 
 for color  in ${colors[@]};do
-  echo ${color}
   (
      mkdir -p "/usr/share/icons/${color}"
      cd "/usr/share/icons/${color}"
