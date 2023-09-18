@@ -23,7 +23,7 @@ apt install firefox firefox-locale-pt git -y
 colors=( Green-Dark Green-Light Lime-Dark Lime-Light Orange-Dark Orange-Light Pink-Dark Pink-Light Purple-Dark Purple-Light
          Red-Dark Red-Light Yellow-Dark Yellow-Light )
 
-for color  in in ${colors[@]};do
+for color  in ${colors[@]};do
   echo ${color}
   (
      mkdir -p "/usr/share/icons/${color}"
