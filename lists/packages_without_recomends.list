@@ -59,6 +59,7 @@ baobab                    # Analisador de discos
 meld                      # Comparador de arquivos
 unrar                     # Descompactador RAR
 xfce4-taskmanager         # Gerenciador de tarefas
+btrfs-progs               # adição do suporte a BTRFS
                           #
 parole                    # Player de midia
 mousepad                  # Editor de textos
@@ -74,7 +75,6 @@ thunar-archive-plugin     # Opções de descompactação gráfica
                           #
 boot-repair               # Reparador de boot
 bashtop                   # Versão atualizada do comando top
-exa                       # Versão atualizada do comando ls
 gvfs-backends             # Screenhots na loja
 p11-kit                   # Suporte a criptografia Chave-pública #11
 xdg-desktop-portal        # Portal desktop base
