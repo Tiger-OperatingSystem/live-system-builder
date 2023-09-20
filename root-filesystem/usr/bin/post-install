@@ -36,3 +36,4 @@ rm -v /usr/bin/os-install
 rm -v /usr/bin/post-install
 rm -v /usr/share/applications/os-install.desktop
 rm -v /etc/skel/Desktop/"Como instalar o sistema.mp4"
+rm -v /home/*/Desktop/"Como instalar o sistema.mp4"
