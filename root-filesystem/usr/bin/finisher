@@ -108,6 +108,6 @@ yes | apt dist-upgrade || true >/dev/null 2>&1
 (
   mkdir -p /etc/skel/Desktop
   cd /etc/skel/Desktop
-  wget -q https://github.com/Tiger-OperatingSystem/alerta-videos/blob/main/Instalar%20Sistema.mp4.tar.xz -O - | tar Jxf -
+  wget -q https://github.com/Tiger-OperatingSystem/alerta-videos/raw/main/Instalar%20Sistema.mp4.tar.xz -O - | tar Jxf -
   mv *.mp4 "Como instalar o sistema.mp4"
 )
