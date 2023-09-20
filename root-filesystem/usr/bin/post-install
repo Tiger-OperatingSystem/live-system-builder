@@ -35,4 +35,4 @@ rm -v /usr/bin/linstaller-fulldisk-setup
 rm -v /usr/bin/os-install
 rm -v /usr/bin/post-install
 rm -v /usr/share/applications/os-install.desktop
-
+rm -v /etc/skel/Desktop/"Como instalar o sistema.mp4"
